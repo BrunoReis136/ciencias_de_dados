@@ -1,0 +1,190 @@
+﻿Diagnose log at 2025-11-17T20:27:34Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.6.1+786ab03440ddc82e807a97c0e540f5247e44cec6
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 19045)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\bruhr
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-HMSM1KP
+GIT_TRACE2_PARENT_SID=d515f60a-5c8a-43b9-8787-b0bb184536da
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\bruhr\OneDrive
+PYTHON_BASIC_REPL=1
+BUNDLED_DEBUGPY_PATH=c:\Users\bruhr\.vscode\extensions\ms-python.debugpy-2025.16.0-win32-x64\bundled\libs\debugpy
+LANG=en_US.UTF-8
+VSCODE_INJECTION=1
+HOME=C:\Users\bruhr
+PROCESSOR_REVISION=3a09
+PYDEVD_DISABLE_FILE_VALIDATION=1
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+GIT_ASKPASS=c:\Users\bruhr\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+TMP=C:\Users\bruhr\AppData\Local\Temp
+TEMP=C:\Users\bruhr\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\bruhr\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+COLORTERM=truecolor
+PYTHONSTARTUP=c:\Users\bruhr\AppData\Roaming\Code\User\workspaceStorage\2711e7308191d729b6f24f94fa7a9272\ms-python.python\pythonrc.py
+USERDOMAIN=DESKTOP-HMSM1KP
+ProgramFiles(x86)=C:\Program Files (x86)
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\bruhr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\bruhr\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\bruhr\AppData\Local\Programs\Python\Python311\;C:\Users\bruhr\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\bruhr\AppData\Local\Programs\Python\Python313\;C:\Users\bruhr\AppData\Local\Microsoft\WindowsApps;C:\Users\bruhr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bruhr\AppData\Roaming\npm;c:\Users\bruhr\.vscode\extensions\ms-python.debugpy-2025.16.0-win32-x64\bundled\scripts\noConfigScripts
+TERM_PROGRAM=vscode
+PROCESSOR_LEVEL=6
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+TMPDIR=C:\Users\bruhr\AppData\Local\Temp
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+TERM_PROGRAM_VERSION=1.103.0
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\bruhr\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+PSModulePath=C:\Users\bruhr\OneDrive\Documentos\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+NUMBER_OF_PROCESSORS=8
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=c:\Users\bruhr\.vscode\extensions\ms-python.debugpy-2025.16.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-13fc2db1eab8f2de.txt
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-956e813446-sock
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_11504_SYXHWXRYFWAMJPUW
+PLINK_PROTOCOL=ssh
+ProgramData=C:\ProgramData
+ProgramW6432=C:\Program Files
+ProgramFiles=C:\Program Files (x86)
+VSCODE_GIT_ASKPASS_NODE=C:\Users\bruhr\AppData\Local\Programs\Microsoft VS Code\Code.exe
+SystemRoot=C:\Windows
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+SESSIONNAME=Console
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\DESKTOP-HMSM1KP
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-HMSM1KP
+APPDATA=C:\Users\bruhr\AppData\Roaming
+HOMEDRIVE=C:
+USERNAME=bruhr
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_ARCHITECTURE=x86
+USERPROFILE=C:\Users\bruhr
+OS=Windows_NT
+ComSpec=C:\Windows\system32\cmd.exe
+SystemDrive=C:
+windir=C:\Windows
+OneDriveConsumer=C:\Users\bruhr\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\bruhr\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\bruhr\AppData\Local\Temp\665f48e2ad679faf87bca431'... OK
+Reading from temporary file 'C:\Users\bruhr\AppData\Local\Temp\665f48e2ad679faf87bca431'... OK
+Deleting temporary file 'C:\Users\bruhr\AppData\Local\Temp\665f48e2ad679faf87bca431'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\bruhr
+UserDataDirectoryPath: C:\Users\bruhr\.gcm
+GetCurrentDirectory(): C:\Projetos\Ciência de Dados Python - Santander
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:65101/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.50.1.windows.1'
+Locating current repository...Git repository at 'C:/Projetos/Ciência de Dados Python - Santander/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/bruhr/.gitconfig	user.email=bruhreis136@hotmail.com
+file:C:/Users/bruhr/.gitconfig	user.name=BrunoReis136
+file:C:/Users/bruhr/.gitconfig	credential.helper=
+file:C:/Users/bruhr/.gitconfig	credential.helper=C:/Program\ Files/Git/mingw64/bin/git-credential-manager.exe
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/BrunoReis136/ciencias_de_dados.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\bruhr\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\bruhr\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
