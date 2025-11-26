@@ -18,7 +18,7 @@ print(f' Is_Super_Set - {cores1.issuperset(cores2)}')
 
 print(f'\n Lista 2 completa: \n{cores2}')
 
-cores2.discard('marrom')
+cores2.discard('marrom') #Alternativa é .remove('marrom') que retorna erro caso o item não exista
 print(f'\nDiscard marrom : {cores2}')
 
 cores2.pop()
