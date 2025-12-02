@@ -144,9 +144,31 @@ ALTER TABLE reservas ADD CONSTRAINT fk_reservas_usuarios FOREIGN KEY (id_usuario
 ALTER TABLE reservas ADD CONSTRAINT fk_reservas_destinos FOREIGN KEY (id_destino) REFERENCES destinos(id);
 
 
+---------------------------------------------------------------------------------------------------------------
 
+-- Usando SUBSTRING_INDEX para seccionar e redistribuir valores
+--Criação de novas colunas
+ALTER TABLE usuarios
+ADD rua VARCHAR(100),
+numero VARCHAR(10),
+cidade VARCHAR(50),
+estado VARCHAR(20),
+pais VARCHAR(30);
 
+--Registrar valores separados com SUBSTRING_INDEX por índice.
+UPDATE usuarios SET
+rua = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco,",",1),",",-1),
+numero = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco,",",2),",",-1),
+cidade = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco,",",3),",",-1),
+estado = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco,",",4),",",-1),
+pais = SUBSTRING_INDEX(SUBSTRING_INDEX(endereco,",",5),",",-1);
 
+--Exclui a coluna anterior
+ALTER TABLE usuarios DROP COLUMN endereco;
+
+---------------------------------------------------------------------------------------------------------------
+
+-- Pesquisa Avançada
 
 
 -------------------- (((((( USANDO A PLATAFORMA CLOUDCLUSTERS PARA ESTUDOS.))))))-------------------------
