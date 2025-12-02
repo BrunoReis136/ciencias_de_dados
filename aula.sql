@@ -169,6 +169,19 @@ ALTER TABLE usuarios DROP COLUMN endereco;
 ---------------------------------------------------------------------------------------------------------------
 
 -- Pesquisa Avançada
+--Seleciona todos registros da tabela 'usuarios' unindo com os da tabela 'reservas' se id de 'usuarios' for igual id_usuario de 'reservas':
+SELECT * FROM usuarios us INNER JOIN reservas rs ON us.id = rs.id_usuario 
 
+--INNER - Somente linhas que correspondem em ambas as tabelas.
+--LEFT - Todas as linhas da tabela esquerda (+ correspondências da direita).
+--RIGHT - Todas as linhas da tabela direita (+ correspondências da esquerda).
+--FULL - Todas as linhas de ambas as tabelas.
+
+-- Sub Consultas:
+--Seleciona todos os registros da tabela 'destinos' onde id NÃO ESTÁ entre (seleciona toda a coluna id_destino da tabela reservas pra usar de parâmetro):
+SELECT * FROM destinos WHERE id NOT IN (SELECT id_destino FROM reservas);
+
+--Seleciona coluna nome e contagem de todos os registros da tabel 'registros' onde id_usuario é igual ao id da tabela 'usuarios' como uma nova coluna denominada 'contagem_reservas' :
+SELECT nome, (SELECT COUNT(*) FROM reservas WHERE id_usuario = usuarios.id) AS contagem_reservas FROM usuarios;
 
 -------------------- (((((( USANDO A PLATAFORMA CLOUDCLUSTERS PARA ESTUDOS.))))))-------------------------
