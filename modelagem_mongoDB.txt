@@ -1,5 +1,7 @@
 https://jsonformatter.curiousconcept.com/#
 
+https://jsonformatter.curiousconcept.com/#
+
 {
 "_id" : 1,
 "nome" : "Bruno Reis",
@@ -13,7 +15,7 @@ https://jsonformatter.curiousconcept.com/#
 
 }],
 "interesses" : ["kart", "culinária"],
-"reservas" : [1,2]
+"reservas" : [ObjectId("123"), Object("234")]
 
 }
 
