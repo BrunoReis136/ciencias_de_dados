@@ -1,7 +1,7 @@
 https://jsonformatter.curiousconcept.com/#
 
-https://jsonformatter.curiousconcept.com/#
 
+Documento com ObjectId - relação de dados interna
 {
 "_id" : 1,
 "nome" : "Bruno Reis",
@@ -19,7 +19,13 @@ https://jsonformatter.curiousconcept.com/#
 
 }
 
-
+#Objeto relacional
+{
+"_id" : ObjectId("123"),
+"destino" : ObjectId("456"),
+"data" : "2025-12-06",
+"usuario" : ObjectId("345")
+}
 
 
 {
