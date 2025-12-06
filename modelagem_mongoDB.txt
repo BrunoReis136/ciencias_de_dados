@@ -1,0 +1,31 @@
+https://jsonformatter.curiousconcept.com/#
+
+{
+"_id" : 1,
+"nome" : "Bruno Reis",
+"idade" : 30,
+"data_nascimento" : "1989-08-18",
+"enderecos" :[{
+"logradeouro" : "Rua Tal",
+"numero" : 180,
+"bairro" : "Itq",
+"cidade" : "Pindamonhangaba"
+
+}],
+"interesses" : ["kart", "culinária"],
+"reservas" : [1,2]
+
+}
+
+
+
+
+{
+"_id": 1,
+"nome" : "Ibirapuera",
+"descricao" : "Principal parque de São Paulo",
+"localizacao" : {
+"type" : "Point",
+"coordinates" :[-46.661056, -23.587384]
+}
+}
