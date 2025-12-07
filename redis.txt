@@ -1,0 +1,71 @@
+#Site :  try.redis.io (aparentemente fora de serviço)
+#Opção: https://onecompiler.com/redis
+
+SET nome "Bruno"    (define a variável nome com valor Bruno)
+SET nome2 "Nara"    (define a variável nome2 com valor Nara)
+
+GET nome            (busca o valor da variável nome)
+=
+Bruno
+
+
+KEYS nome*          (busca todas as variáveis denominadas 'nome' ou com algo depois)
+=
+nome
+nome2
+
+
+SET nome3 "Lilian"  (define a variável nome3 com o valor Lilian)
+
+
+KEYS nome*          (busca todas as variáveis denominadas 'nome' ou com algo depois)
+=
+nome
+nome2
+nome3
+
+                
+DEL nome            (deleta a variável nome)
+
+
+KEYS nome
+=
+nome2
+nome3
+
+
+EXPIRE nome2 1     (define tempo de expiração para a variável nome2 de 1 segundo)
+
+EXPIRE nome3 10    (define tempo de expiração para a variável nome3 de 10 segundo)
+
+KEYS nome*         (busca todas as variáveis denominadas 'nome' ou com algo depois, mas depois de 10 segundos todas as variáveis expiraram e foram excluidas)
+=
+(empty list or set)
+
+
+SET nome "Bruno"
+EXPIRE nome 15
+TTL nome           (retorna o tempo restante em segundos para expirar a variável nome)
+=
+(integer) 9        (restam 9 segundos para expirar a variável nome)
+
+
+EXISTS nome        (contagem de existências da variável chamada nome)
+=
+(integer) 1
+
+
+SET acessos 1      ((define a variável acessos com o valor 1)
+INCR acessos       (incrementa o valor da variável numérica)
+=
+(integer) 2                    
+
+DECR acessos      (decrementa o valor da variável numérica)   
+=
+(integer) 1
+
+
+LPUSH usuarios "Bruno" "Nara" "Lilian" (define uma array com varios valores)
+LRANGE usuarios 0 -1 (busca valores da array de 0 inicio a -1 final)
+LPUSH usuarios "Snow" "Hutao" "Leslo" (adiciona mais elementos à array)
+LLEN usuarios     (busca a quantidade de elementos da array usuarios)
