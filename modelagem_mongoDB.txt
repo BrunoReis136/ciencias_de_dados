@@ -61,9 +61,64 @@ db.nomedocollection.insertOne({
 })
 
 
-db.nomecollection.insertMany([
-  -lista de inserções-
-]}
+db.usuarios.insertMany([{
+    nome: "João",
+    idade: 25,
+    cidade: "São Paulo",
+    estado: "SP",
+    endereco: {
+      rua: "Avenida Principal",
+      numero: 123,
+      cidade: "São Paulo",
+      estado: "SP"
+    }
+  }, {
+    nome: "Maria",
+    idade: 30,
+    cidade: "Rio de Janeiro",
+    estado: "RJ",
+    endereco: {
+      rua: "Rua Secundária",
+      numero: 456,
+      cidade: "Rio de Janeiro",
+      estado: "RJ"
+    }
+},{
+    nome: "Carlos",
+    idade: 20,
+    cidade: "São Paulo",
+    estado: "SP",
+    endereco: {
+      rua: "Rua Principal",
+      numero: 789,
+      cidade: "São Paulo",
+      estado: "SP"
+    }
+  },{
+    nome: "Ana",
+    idade: 35,
+    cidade: "São Paulo",
+    estado: "SP",
+    endereco: {
+      rua: "Avenida Secundária",
+      numero: 1011,
+      cidade: "São Paulo",
+      estado: "SP"
+    }
+    }
+    ,  
+    {
+    nome: "Pedro",
+    idade: 28,
+    cidade: "Belo Horizonte",
+    estado: "MG",
+    endereco: {
+      rua: "Rua Principal",
+      numero: 1314,
+      cidade: "Belo Horizonte",
+      estado: "MG"
+    }
+  }]);
 
 
 #SELEÇÃO DE DADOS
@@ -76,16 +131,54 @@ db.usuarios.findOneAndUpdate({},{$operador : {}})
 
 db.usuarios.findOneAndDelete({})
 
-db.usuarios.updateOne({"nome":"Bruno"},{$set : {"nome":"Bruno Reis"}}) #Atualiza o primeiro registro encontrado com o parâmetro
-
-db.usuarios.updateMany({"nome":"Bruno"},{$set : {"nome":"Bruno Reis"}}) #Atualiza todos os registros encontrados com o parâmetro
- #Operadores possíveis:  
-  $set = setar alteração de valore por outro valor
-  $inc = incremento de valor => db.usuarios.updateOne({"nome":"Bruno"},{$inc : {"viagens":1}})
-  $push = adiciona elemento à array => db.usuarios.updateOne({"nome":"Bruno"},{$push : {"interesses":{$each : ["video game", "programação"]}}})
-  $each = repete ação pra uma array de itens => {$push : {"interesses":{$each : ["video game", "programação"]}}}
-
-
 db.usuarios.deleteOne({"nome": "Bruno Reis"}) #Deleta somente o primeiro
 
 db.usuarios.deleteMany({"nome": "Bruno Reis"}) #Deleta todos
+
+db.usuarios.updateOne({"nome":"Bruno"},{$set : {"nome":"Bruno Reis"}}) #Atualiza o primeiro registro encontrado com o parâmetro
+
+db.usuarios.updateMany({"nome":"Bruno"},{$set : {"nome":"Bruno Reis"}}) #Atualiza todos os registros encontrados com o parâmetro
+
+#Operadores possíveis:  
+$set = setar alteração de valore por outro valor
+$inc = incremento de valor => db.usuarios.updateOne({"nome":"Bruno"},{$inc : {"viagens":1}})
+$push = adiciona elemento à array => db.usuarios.updateOne({"nome":"Bruno"},{$push : {"interesses":{$each : ["video game", "programação"]}}})
+$each = repete ação pra uma array de itens => {$push : {"interesses":{$each : ["video game", "programação"]}}}
+
+$and
+$or
+$not
+
+$eq : ==
+$ne : !=
+$gt : >
+$gte : >=
+$lt : <
+$lte : <=
+$in : in array []
+$nin : not in array []
+
+# Consulta avançada com funções e oepradores
+
+#Idade igual 30 E nome igual Bruno Reis:
+db.usuarios.find({$and: [{idade:30},{nome:"Bruno Reis"}]})
+
+#Nome não é Carlos E nem João:
+{$and : [{nome:{$ne: "Carlos"}}, {nome:{$ne: "João"}}]}  
+
+#Idade maior ou igual a 30 E idade menor ou igual a 50:
+{
+  $and: [
+    { idade: { $gte: 30 } },
+    { idade: { $lte: 50 } }
+  ]
+}
+
+#Cidade igual a São Paulo OU Belo Horizonte
+1 - {$or : [{cidade : "São Paulo"}, {cidade : "Belo Horizonte"}]
+2 - {cidade : {$in: ["São Paulo", "Belo Horizonte"]}}
+
+#Outros valores da pesquisa:
+( {query} , {project} ) .sort( valor : 1(ascend), valor2:-1(descend) ).limit( qtd de amostras ).
+
+db.usuarios.find(    {$and: [{idade:30},{nome:"Bruno Reis"}]}  ,   {nome : 1, idade : 1}   ,   {idade : 1, nome : -1 } ).
