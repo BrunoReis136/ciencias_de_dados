@@ -42,7 +42,11 @@ Documento com ObjectId - relação de dados interna
 
 MÉTODOS:
 
-#INSERINDO DADOS EM UMA COLLECTION
+#CRIANDO COLLECTION:
+use nomedacollection
+
+
+#INSERINDO DOCUMENTO EM UMA COLLECTION
 
 db.nomedocollection.insertOne({
 "nome" : "Bruno Reis",
@@ -60,3 +64,28 @@ db.nomedocollection.insertOne({
 db.nomecollection.insertMany([
   -lista de inserções-
 ]}
+
+
+#SELEÇÃO DE DADOS
+
+db.usuarios.find({})
+
+db.usuarios.findOne({})
+
+db.usuarios.findOneAndUpdate({},{$operador : {}})
+
+db.usuarios.findOneAndDelete({})
+
+db.usuarios.updateOne({"nome":"Bruno"},{$set : {"nome":"Bruno Reis"}}) #Atualiza o primeiro registro encontrado com o parâmetro
+
+db.usuarios.updateMany({"nome":"Bruno"},{$set : {"nome":"Bruno Reis"}}) #Atualiza todos os registros encontrados com o parâmetro
+ #Operadores possíveis:  
+  $set = setar alteração de valore por outro valor
+  $inc = incremento de valor => db.usuarios.updateOne({"nome":"Bruno"},{$inc : {"viagens":1}})
+  $push = adiciona elemento à array => db.usuarios.updateOne({"nome":"Bruno"},{$push : {"interesses":{$each : ["video game", "programação"]}}})
+  $each = repete ação pra uma array de itens => {$push : {"interesses":{$each : ["video game", "programação"]}}}
+
+
+db.usuarios.deleteOne({"nome": "Bruno Reis"}) #Deleta somente o primeiro
+
+db.usuarios.deleteMany({"nome": "Bruno Reis"}) #Deleta todos
