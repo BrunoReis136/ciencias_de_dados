@@ -37,3 +37,26 @@ Documento com ObjectId - relação de dados interna
 "coordinates" :[-46.661056, -23.587384]
 }
 }
+
+
+
+MÉTODOS:
+
+#INSERINDO DADOS EM UMA COLLECTION
+
+db.nomedocollection.insertOne({
+"nome" : "Bruno Reis",
+"idade" : 30,
+"data_nascimento" : "1989-08-18",
+"enderecos" :[{
+"logradeouro" : "Rua Tal",
+"numero" : 180,
+"bairro" : "Itq",
+"cidade" : "Pindamonhangaba"
+}]
+})
+
+
+db.nomecollection.insertMany([
+  -lista de inserções-
+]}
